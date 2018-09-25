@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+Empty project withh MVC references selected in template
+
+RouteConfig class in App_start folder Then called in Application start method of Global.asax.cs
+
+What is modules ,Handlers in MVC
+
+Package.config- all package version details
+
+When adding first view missing packages Bootstrap and jquery are added in the project automatically
+
+Nuget is the package manager
+
+>>>>>>> h
 All the public methods in mvc controller are action method(even without actionresult return type)- can be called as get request
 
 Toavoid mishandling, non action methods must not be public or mention as NONAction attribute
