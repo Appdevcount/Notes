@@ -1,0 +1,17 @@
+All the public methods in mvc controller are action method(even without actionresult return type)- can be called as get request
+
+Toavoid mishandling, non action methods must not be public or mention as NONAction attribute
+
+we need add Entitiy framework pkg in UI project and add connectionstring details in UI project.because after all only DAL layer dll is added in UI project and It uses the host project configurations only 
+
+Isunicode(false) in CF fluent api - reject/wot store non english characters like not N''
+
+Setting relationship between entities - in fluent api 1 to many , always start from  child entity to create relationship statement
+
+Calling existing sp and sqlfunc in CF as method with Datatbase.sqlquery statment returning typed result
+
+
+
+
+
+
