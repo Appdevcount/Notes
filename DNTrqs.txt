@@ -22,8 +22,23 @@ Setting relationship between entities - in fluent api 1 to many , always start f
 
 Calling existing sp and sqlfunc in CF as method with Datatbase.sqlquery statment returning typed result
 
+Repository design pattern - minimize duplicate query logic and SOC - application need not know about datasource and additionally access logic and allow unit testing 
 
+Repository implemenetation will be implemeneted in ways - Generic(Add,remove ,find,delete, getall) and specific inheriting generic(entity specific like top some.. get some) 
 
+Entities model and Viewmodel can be placed in separate project
 
+Repository abstration and implementation can be separate project
+
+Repository pattern- dbset
+UnitofWork - DbContext - Intialize DbContext and Commiting changes in single place
+
+IOC- Inversion of normal programming(giving objects in needed place instead of creating there )
+
+IOC Implmentation pattern - Service locator, event,delegate ,Dependency injection
+
+Dependency Injection - Constructor injection(passing dependency in constructor),Property setter injection(passing dependency as property value),Method injection (passing dependency as method argument)
+
+Dependency injection is implemented in realtime using IOC containers(pass objects at run time and maintains lifetime of dependency objects) like Unity,Castle windsor,structure map,Ninject
 
 
