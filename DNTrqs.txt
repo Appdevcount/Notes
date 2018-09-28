@@ -42,3 +42,5 @@ Dependency Injection - Constructor injection(passing dependency in constructor),
 Dependency injection is implemented in realtime using IOC containers(pass objects at run time and maintains lifetime of dependency objects) like Unity,Castle windsor,structure map,Ninject
 
 
+Absratract and other design patterns vs Repo and unit of work
+How asp.net  mvc with ang riuting show demo
