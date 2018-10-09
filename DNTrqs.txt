@@ -44,3 +44,25 @@ Dependency injection is implemented in realtime using IOC containers(pass object
 
 Absratract and other design patterns vs Repo and unit of work
 How asp.net  mvc with ang riuting show demo
+
+Conditional Layout can be done in Layout page - based on reading the routedata values in Layout page
+RouteData is a property of base Controller class, so RouteData can be accessed in any controller. RouteData contains route information of a current request. You can get the controller, action or parameter information
+public ActionResult Index(int? id, string name, int? standardId)
+    {
+        var controller = RouteData.Values["controller"];
+        var action = RouteData.Values["action"];          
+        id = (int)RouteData.Values["id"];
+        name = (string)RouteData.Values["name"];
+        standrdId = (int)RouteData.Values["standardId"];
+        var area = RouteData.DataTokens["areaname"];
+        return View();
+    }
+
+
+ViewStart.cshtml - Can be used for writing some csharp code for page initialization
+
+Viewlevel Web.config - will contain required csharp and other namespaces, we can add our Custom helper namespaces if required
+
+MVC vs 3Tier - Tier refers to individual Hosted application and Layer refers to BL,DAL,PL
+
+Architectural Pattern[High level - MVC MVVM SOA REST] vs Design Pattern[Code or Component level - Singleton,Abstract design on how the objects are created and maintaned]
