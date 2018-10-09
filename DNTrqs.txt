@@ -59,7 +59,7 @@ public ActionResult Index(int? id, string name, int? standardId)
     }
 
 
-ViewStart.cshtml - Can be used for writing some csharp code for page initialization
+ViewStart.cshtml - Can be used for writing some csharp code for page initialization like setting Layout= variable
 
 Viewlevel Web.config - will contain required csharp and other namespaces, we can add our Custom helper namespaces if required
 
