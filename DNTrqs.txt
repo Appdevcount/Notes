@@ -84,8 +84,6 @@ We can create Custom HTML Submit button
 We can implement Custom validation attribute by inheriting Valifation attributr class. This will need server side postback for validation to happen and auto hide of validation message on typing wont happen. so for this, Microsoft has provided client side validation nuget packages from jqueryvalidation(jquery.validate.min.js) and Microsofts own libraray(jquery.validate.unobtrusive.js). Thes will help Datatannotation validation to happen in client side itself.But still some controls like check box wont happen at client side, for that we need to implement one more claass in our custom validation for checkbox ie..IClientValidatable and implement its method.
 Addition we need to use jquery validations adaptor in the page in separate script block .Please refer practice solution for detail
 
-
-
 Inline html helpers - @helper can be used to write C# methods in .cshtml page
 
 
