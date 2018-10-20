@@ -63,6 +63,29 @@ ViewStart.cshtml - Can be used for writing some csharp code for page initializat
 
 Viewlevel Web.config - will contain required csharp and other namespaces, we can add our Custom helper namespaces if required
 
-MVC vs 3Tier - Tier refers to individual Hosted application and Layer refers to BL,DAL,PL
+MVC vs 3Tier - Tier refer/;s to individual Hosted application and Layer refers to BL,DAL,PL
 
 Architectural Pattern[High level - MVC MVVM SOA REST] vs Design Pattern[Code or Component level - Singleton,Abstract design on how the objects are created and maintaned]
+
+We can have multiple routes type in RouteConfig class.Routes will be taken in the order mentioned.
+
+We can use both conventional routing and Attribute[Route("~/Controllername/ActionName/{id}/{catid}")-This can be user defined pathwkh] routing in MVC .To enable attribute routing in MVC , configure it by adding routes.MapMVCAttributeRoutes  in Routingconfig
+
+We can use manual modelstate.Addmodelerror("modelprop","err msg") for each property on post request for forma validations in case if DataAnnotations usage is difficult in some cases like for Boolean type property we can utilize adding modelstate error manually 
+
+Extension methods in C# - like static class with static method.
+
+HTML name attribute is used to post and read data for any language/technology ..php,mvc,webform . Id attribute can used at client side for DOM manipulations. If there are more than one element with same name then we read data as like string[] name at server side to get data from same name array
+
+EditorFor is Templated HTML helper which automtically find datatype from DataAnnotations of property.DataType works with only Templated helper. 
+
+We can create Custom HTML Submit button
+
+We can implement Custom validation attribute by inheriting Valifation attributr class. This will need server side postback for validation to happen and auto hide of validation message on typing wont happen. so for this, Microsoft has provided client side validation nuget packages from jqueryvalidation(jquery.validate.min.js) and Microsofts own libraray(jquery.validate.unobtrusive.js). Thes will help Datatannotation validation to happen in client side itself.But still some controls like check box wont happen at client side, for that we need to implement one more claass in our custom validation for checkbox ie..IClientValidatable and implement its method.
+Addition we need to use jquery validations adaptor in the page in separate script block .Please refer practice solution for detail
+
+
+
+Inline html helpers - @helper can be used to write C# methods in .cshtml page
+
+
