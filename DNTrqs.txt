@@ -47,6 +47,7 @@ How asp.net  mvc with ang riuting show demo
 
 Conditional Layout can be done in Layout page - based on reading the routedata values in Layout page
 RouteData is a property of base Controller class, so RouteData can be accessed in any controller. RouteData contains route information of a current request. You can get the controller, action or parameter information
+
 public ActionResult Index(int? id, string name, int? standardId)
     {
         var controller = RouteData.Values["controller"];
@@ -85,5 +86,26 @@ We can implement Custom validation attribute by inheriting Valifation attributr 
 Addition we need to use jquery validations adaptor in the page in separate script block .Please refer practice solution for detail
 
 Inline html helpers - @helper can be used to write C# methods in .cshtml page
+
+Entity Framework::::::::::::::
+
+Navigation property(public Category Category{get;set;}) can be used to link 2 tables using Foriegn key as Annotation by mention Foreignkey column in argument
+
+In Context class , pass the connection string in base class constructor(DbContext)
+
+If navigation property is declaredf as virtual then Lazy loading is enabled, other wise we cant use lazy loading and it will cause exception
+
+EF Fluent API::::::::::::::
+
+We can use OnModelCreating method override to define relationship between entities. virtual ICollection is used in defining navigation proper.ties and its relation ship . Make relation ship from child table to Parent table in Fluent api.
+
+Can define composite primary key as like .HasKey(p=> new {p.UserId,p.Name})
+Can mention proprty with varchar type as .HasColumnType("varchar") or .IsUnicode(false)
+Its recommended to generate scripts in migration and share the scripts to DBA for DB changes
+Can also rollback to previous state-> update-database -TargetMigration:"migrationid" -verbose -script
+
+Design Pattern:::::::
+
+Repository Design Pattern - Abstract layer between data and domain layer. Decouples the application from Persistence framework EF,Dapper.. and minimize query logic . Allows unit testing as the repositories are bound to interface which can be injected in class at run time.
 
 
