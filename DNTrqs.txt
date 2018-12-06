@@ -42,3 +42,70 @@ Dependency Injection - Constructor injection(passing dependency in constructor),
 Dependency injection is implemented in realtime using IOC containers(pass objects at run time and maintains lifetime of dependency objects) like Unity,Castle windsor,structure map,Ninject
 
 
+Absratract and other design patterns vs Repo and unit of work
+How asp.net  mvc with ang riuting show demo
+
+Conditional Layout can be done in Layout page - based on reading the routedata values in Layout page
+RouteData is a property of base Controller class, so RouteData can be accessed in any controller. RouteData contains route information of a current request. You can get the controller, action or parameter information
+
+public ActionResult Index(int? id, string name, int? standardId)
+    {
+        var controller = RouteData.Values["controller"];
+        var action = RouteData.Values["action"];          
+        id = (int)RouteData.Values["id"];
+        name = (string)RouteData.Values["name"];
+        standrdId = (int)RouteData.Values["standardId"];
+        var area = RouteData.DataTokens["areaname"];
+        return View();
+    }
+
+
+ViewStart.cshtml - Can be used for writing some csharp code for page initialization like setting Layout= variable
+
+Viewlevel Web.config - will contain required csharp and other namespaces, we can add our Custom helper namespaces if required
+
+MVC vs 3Tier - Tier refer/;s to individual Hosted application and Layer refers to BL,DAL,PL
+
+Architectural Pattern[High level - MVC MVVM SOA REST] vs Design Pattern[Code or Component level - Singleton,Abstract design on how the objects are created and maintaned]
+
+We can have multiple routes type in RouteConfig class.Routes will be taken in the order mentioned.
+
+We can use both conventional routing and Attribute[Route("~/Controllername/ActionName/{id}/{catid}")-This can be user defined pathwkh] routing in MVC .To enable attribute routing in MVC , configure it by adding routes.MapMVCAttributeRoutes  in Routingconfig
+
+We can use manual modelstate.Addmodelerror("modelprop","err msg") for each property on post request for forma validations in case if DataAnnotations usage is difficult in some cases like for Boolean type property we can utilize adding modelstate error manually 
+
+Extension methods in C# - like static class with static method.
+
+HTML name attribute is used to post and read data for any language/technology ..php,mvc,webform . Id attribute can used at client side for DOM manipulations. If there are more than one element with same name then we read data as like string[] name at server side to get data from same name array
+
+EditorFor is Templated HTML helper which automtically find datatype from DataAnnotations of property.DataType works with only Templated helper. 
+
+We can create Custom HTML Submit button
+
+We can implement Custom validation attribute by inheriting Valifation attributr class. This will need server side postback for validation to happen and auto hide of validation message on typing wont happen. so for this, Microsoft has provided client side validation nuget packages from jqueryvalidation(jquery.validate.min.js) and Microsofts own libraray(jquery.validate.unobtrusive.js). Thes will help Datatannotation validation to happen in client side itself.But still some controls like check box wont happen at client side, for that we need to implement one more claass in our custom validation for checkbox ie..IClientValidatable and implement its method.
+Addition we need to use jquery validations adaptor in the page in separate script block .Please refer practice solution for detail
+
+Inline html helpers - @helper can be used to write C# methods in .cshtml page
+
+Entity Framework::::::::::::::
+
+Navigation property(public Category Category{get;set;}) can be used to link 2 tables using Foriegn key as Annotation by mention Foreignkey column in argument
+
+In Context class , pass the connection string in base class constructor(DbContext)
+
+If navigation property is declaredf as virtual then Lazy loading is enabled, other wise we cant use lazy loading and it will cause exception
+
+EF Fluent API::::::::::::::
+
+We can use OnModelCreating method override to define relationship between entities. virtual ICollection is used in defining navigation proper.ties and its relation ship . Make relation ship from child table to Parent table in Fluent api.
+
+Can define composite primary key as like .HasKey(p=> new {p.UserId,p.Name})
+Can mention proprty with varchar type as .HasColumnType("varchar") or .IsUnicode(false)
+Its recommended to generate scripts in migration and share the scripts to DBA for DB changes
+Can also rollback to previous state-> update-database -TargetMigration:"migrationid" -verbose -script
+
+Design Pattern:::::::
+
+Repository Design Pattern - Abstract layer between data and domain layer. Decouples the application from Persistence framework EF,Dapper.. and minimize query logic . Allows unit testing as the repositories are bound to interface which can be injected in class at run time.
+
+
