@@ -1,0 +1,114 @@
+C:\Users\Siraj>ng -v
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 6.2.3
+Node: 10.4.0
+OS: win32 x64
+Angular:
+...
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.8.3
+@angular-devkit/core         0.8.3
+@angular-devkit/schematics   0.8.3
+@schematics/angular          0.8.3
+@schematics/update           0.8.3
+rxjs                         6.2.2
+typescript                   2.9.2
+
+
+C:\Users\Siraj>TSC --V
+Version 3.2.1
+
+
+
+
+C:\Users\Siraj>npm --v
+6.1.0
+
+
+
+C:\Users\Siraj>npm install -g @angular/cli
+C:\Users\Siraj\AppData\Roaming\npm\ng -> C:\Users\Siraj\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules\@angular\cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ @angular/cli@7.1.2
+added 109 packages from 90 contributors, removed 59 packages and updated 22 packages in 280.663s
+
+C:\Users\Siraj>ng -v
+Available Commands:
+  add Adds support for an external library to your project.
+  build (b) Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
+  config Retrieves or sets Angular configuration values in the angular.json file for the workspace.
+  doc (d) Opens the official Angular documentation (angular.io) in a browser, and searches for a given keyword.
+  e2e (e) Builds and serves an Angular app, then runs end-to-end tests using Protractor.
+  generate (g) Generates and/or modifies files based on a schematic.
+  help Lists available commands and their short descriptions.
+  lint (l) Runs linting tools on Angular app code in a given project folder.
+  new (n) Creates a new workspace and an initial Angular app.
+  run Runs an Architect target with an optional custom builder configuration defined in your project.
+  serve (s) Builds and serves your app, rebuilding on file changes.
+  test (t) Runs unit tests in a project.
+  update Updates your application and its dependencies. See https://update.angular.io/
+  version (v) Outputs Angular CLI version.
+  xi18n Extracts i18n messages from source code.
+
+For more detailed help run "ng [command name] --help"
+
+
+C:\Users\Siraj>ng v
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 7.1.2
+Node: 10.4.0
+OS: win32 x64
+Angular:
+...
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.11.2
+@angular-devkit/core         7.1.2
+@angular-devkit/schematics   7.1.2
+@schematics/angular          7.1.2
+@schematics/update           0.11.2
+rxjs                         6.3.3
+typescript                   3.1.6
+
+
+PS C:\WINDOWS\system32> Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+PS C:\WINDOWS\system32> npm install -g npm-windows-upgrade
+C:\Users\Siraj\AppData\Roaming\npm\npm-windows-upgrade -> C:\Users\Siraj\AppData\Roaming\npm\node_modules\npm-windows-upgrade\bin\npm-windows-upgrade.js
++ npm-windows-upgrade@5.0.0
+added 87 packages from 54 contributors in 36.831s
+PS C:\WINDOWS\system32> npm-windows-upgrade
+npm-windows-upgrade v5.0.0
+? Which version do you want to install? 6.5.0-next.0
+Checked system for npm installation:
+According to PowerShell: C:\Program Files\nodejs
+According to npm:        C:\Users\Siraj\AppData\Roaming\npm
+Decided that npm is installed in C:\Program Files\nodejs
+Upgrading npm... /
+
+Upgrade finished. Your new npm version is 6.5.0-next.0. Have a nice day!
+
+PS C:\WINDOWS\system32> npm --v
+6.5.0-next.0
+PS C:\WINDOWS\system32> node -v
+v10.4.0
