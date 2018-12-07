@@ -1,4 +1,4 @@
-Empty project withh MVC references selected in template
+jo;Empty project withh MVC references selected in template
 
 RouteConfig class in App_start folder Then called in Application start method of Global.asax.cs
 
@@ -108,4 +108,98 @@ Design Pattern:::::::
 
 Repository Design Pattern - Abstract layer between data and domain layer. Decouples the application from Persistence framework EF,Dapper.. and minimize query logic . Allows unit testing as the repositories are bound to interface which can be injected in class at run time.
 
+UnitOfWork - Creates/manage instance for each repository(generic or specific) and set db context
 
+IOC - DI Implementation of IOC
+Contructor(Pass dependency as constructor arg),Property(Pass/assign dependency as property without need to initialize client class each time),Method(Specific dependency in some methods- can use this)
+
+In Practical IOC Containers(IOC Container Framework) are used for registering and getting instance of dependency and managing lifetime of objects.IOC Containers like Unity,Castle windsor,Ninject ,StructureMap etc..
+
+In our case , we are using Unity Container - Add Nuget pkg for Unit.MVC5.. It will add Unity config to register dependencies in one place. The Unit Config file need to be registered in Global.asax.cs file.
+
+Using Coontainers now, we dont need explicit  instatiation of objects inside construction or any direct reference of object, just the interface is enough.
+
+TDD Approach(MS Test Framework used) ::::::::::::: Test cases are written before the actual code being written.To pass the Test case code will be written. Then Refactor the code to improve code quality.
+It follows below flow
+Write Failing test->Write code to pass test->Refactor to improve code quality
+A:Arrange - Initializations
+A:Action - Perform test
+A:Assert - Verify Result
+
+There is test menu in VStudio for Test project , can use to run tests.
+TDD helps in FASTER DEBUGGING(Understood that we call and test anymethod in Test project , will help a lot clearly in confirming the functionality)
+
+Mocking FRamework(Moq)- Create Fake objects for testing . Can intercept the The object and return fake method results for testing to avoid database hit.Mock<IUnitOfwork> obj;
+
+Typescript::::::::::
+Install Node(JS Runtime env) 
+Install - NPM install typescript 
+We can call js file directly in node as like - node variable.js or node variable . It will write reults in cmd
+Install angularcli in node
+
+Angular App:::::::::::::
+List of Angular CLI commands for Angular project and building block creation - like ng new appname --skip-install --routing , ng g c componentname
+Tslint.json file will have rules on Angular projects formatting related and more
+
+Module VS Directive ????
+
+On successfully building the application, angular will create bundle js files like main.js,polyfills.js etc.....
+
+Angular Initilization Process => Main.ts will have the application startup settings which in turn contain the main/app module details which in turn will have Component , Directive and Pipes details which in turn have its Views running within in Main component view which is inside the master view(index.html)
+
+Angular Building blocks => Module,componenets(Initialized by Angular DI Engine),Templates,Metadata,Data Binding ,Directives,Pipes,Routing,Forms,Services,Dependency Injection
+
+ng new myapp --routing --skip-install [Creates angular project with routing configuration enabled and skip angular inbuilt  modules installations]
+
+We can install Botstrap 4 snippets extension in VSCode
+
+main.ts will contain bootstrapmodule as an argument in bootstrapmodule() method which is Appmodule.. Appmodule is the startup module and it will contain bootstrap component which is AppComponent
+
+Twoway Databinding , we can use only if we import FormsModule in Appmodule
+
+Inheritance(Component), Component Life cycle Hooks(ngOnInit,ngOnChanges),Component Metadata
+
+Inheritance Component:
+Inherites all events ,contructor of parent if we didnt intialize separately in the child component class.
+We can intialize parent component class from clid using super() with arguments
+
+Refer the Shailendra pdf for Databindings in Angular
+
+Parent to Child Data transfer needs @Input decorator
+Child to Parent Data transfer needs @Output decorator of type EventEmitter<type>, we use event here to pass the data.
+
+Component Life cycle hooks:
+Constructor- class member intilization
+ngOnChnages - fire this event when @Input decorator changes from parent to child
+ngOnInit - like Page_load method , can use to do some intilization before component load like api calls
+ngDoCheck - fires this event wheneveer there is change made in template/DOM
+ngAfterContentInit
+ngAfterContentChecked
+ngAfterViewInit
+ngAfterViewChecked
+ngOnDestroy - like Destructor in a class to release some resources from component
+
+Angular Forms:
+We can use angular packages/3rd party modules for validatons like for passowrd comparer - angular-text-equality-validator
+
+ng build --watch to ompile the ts files for every change aitomatically
+
+Can ask queries on service consumption in comparison with C# consumption
+
+Areas are modules in MVC with its own structure.Arearegistration.cs file for each area will have its own routing details
+
+What is FormsAuthentication and how it works,what is custom proncipal,cart service explanation needed
+
+What is the use of namespace in routeconfig namespaces: new[] { "MVCApp.Controllers" } parameter in Maproute extension method
+
+What/Purpose of  is CustomPrincipal containing all UserModel properties
+
+How this works and what it does - Application_PostAuthenticateRequest method explanation in Global.asax
+
+FormsAuthentication.FormsCookieName   FormsAuthenticationTicket information needed on it usage
+
+When abstract class is inherited , it doesnt need to be implemented
+
+How Area parameter is utilized in RouteValueDictionary(new { controller = "Account", action = "Login", area = ""
+
+How Ticket to Authentication to Authorization flows
